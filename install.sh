@@ -128,7 +128,7 @@ main() {
     echo "  }"
     echo ""
     echo "  dependencies {"
-    echo "      compile 'com.lightydev:droidkit:+'"
+    echo "      implementation 'com.lightydev:droidkit:+'"
     echo "  }"
     echo ""
     echo "For more information, visit: https://github.com/realmikewestfall304-wq/droidkit"
