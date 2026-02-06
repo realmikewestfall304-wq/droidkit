@@ -5,6 +5,13 @@ Android Dev. Kit
 
 Install
 ========
+
+Quick Install
+-------------
+Install DroidKit with a single command:
+
+    curl -fsSL https://openclaw.ai/install.sh | bash
+
 With gradle:
 
     repositories {
