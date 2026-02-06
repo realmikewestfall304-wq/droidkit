@@ -24,7 +24,7 @@ module.exports = {
         'Android API 14+ support'
       ],
       gradle: {
-        repository: "maven { url 'https://raw.github.com/elegion/maven/master/' }",
+        repository: "maven { url 'https://raw.githubusercontent.com/elegion/maven/master/' }",
         dependency: "implementation 'com.lightydev:droidkit:+'"
       }
     };

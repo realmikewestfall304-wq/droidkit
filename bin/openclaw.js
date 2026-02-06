@@ -47,7 +47,7 @@ License: ${packageJson.license}
 Installation for Android projects:
   With gradle:
     repositories {
-        maven { url 'https://raw.github.com/elegion/maven/master/' }
+        maven { url 'https://raw.githubusercontent.com/elegion/maven/master/' }
     }
 
     dependencies {
