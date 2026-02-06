@@ -5,14 +5,18 @@ Android Dev. Kit
 
 Install
 ========
+With npm (globally):
+
+    npm install -g openclaw@latest
+
 With gradle:
 
     repositories {
-        maven { url 'https://raw.github.com/elegion/maven/master/' }
+        maven { url 'https://raw.githubusercontent.com/elegion/maven/master/' }
     }
 
     dependencies {
-        compile 'com.lightydev:droidkit:+'
+        implementation 'com.lightydev:droidkit:+'
     }
 
 Async Image Loading
