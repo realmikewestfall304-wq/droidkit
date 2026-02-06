@@ -51,7 +51,7 @@ Installation for Android projects:
     }
 
     dependencies {
-        compile 'com.lightydev:droidkit:+'
+        implementation 'com.lightydev:droidkit:+'
     }
 
 Features:

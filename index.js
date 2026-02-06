@@ -25,7 +25,7 @@ module.exports = {
       ],
       gradle: {
         repository: "maven { url 'https://raw.github.com/elegion/maven/master/' }",
-        dependency: "compile 'com.lightydev:droidkit:+'"
+        dependency: "implementation 'com.lightydev:droidkit:+'"
       }
     };
   }
