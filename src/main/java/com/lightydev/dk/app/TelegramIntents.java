@@ -24,7 +24,7 @@ import android.net.Uri;
  * Provides methods for common Telegram interactions such as opening profiles,
  * chats, sharing content, and joining channels.
  *
- * @since 2.2.1
+ * @since 2.3.1
  */
 public final class TelegramIntents {
 
@@ -53,7 +53,7 @@ public final class TelegramIntents {
    * @return Intent to open the user's profile/chat
    */
   public static Intent profile(String username) {
-    return new Intent(Intent.ACTION_VIEW, Uri.parse(TELEGRAM_URL_SCHEME + "resolve?domain=" + username));
+    return new Intent(Intent.ACTION_VIEW, Uri.parse(TELEGRAM_URL_SCHEME + "resolve?domain=" + Uri.encode(username)));
   }
 
   /**
@@ -75,7 +75,7 @@ public final class TelegramIntents {
    * @return Intent to open a chat with pre-filled text
    */
   public static Intent chat(String username, String text) {
-    return new Intent(Intent.ACTION_VIEW, Uri.parse(TELEGRAM_URL_SCHEME + "resolve?domain=" + username + "&text=" + Uri.encode(text)));
+    return new Intent(Intent.ACTION_VIEW, Uri.parse(TELEGRAM_URL_SCHEME + "resolve?domain=" + Uri.encode(username) + "&text=" + Uri.encode(text)));
   }
 
   /**
@@ -101,7 +101,7 @@ public final class TelegramIntents {
    * @return Intent to open the bot
    */
   public static Intent bot(String botUsername, String startParam) {
-    String url = TELEGRAM_URL_SCHEME + "resolve?domain=" + botUsername;
+    String url = TELEGRAM_URL_SCHEME + "resolve?domain=" + Uri.encode(botUsername);
     if (startParam != null && !startParam.isEmpty()) {
       url += "&start=" + Uri.encode(startParam);
     }
@@ -125,7 +125,7 @@ public final class TelegramIntents {
    * @return Intent to join the channel
    */
   public static Intent joinChannel(String inviteHash) {
-    return new Intent(Intent.ACTION_VIEW, Uri.parse(TELEGRAM_URL_SCHEME + "join?invite=" + inviteHash));
+    return new Intent(Intent.ACTION_VIEW, Uri.parse(TELEGRAM_URL_SCHEME + "join?invite=" + Uri.encode(inviteHash)));
   }
 
 }
