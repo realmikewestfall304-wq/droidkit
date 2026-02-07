@@ -10,6 +10,7 @@
 
 # generated files
 bin/**
+!bin/openclaw.js
 gen/**
 out/**
 gen-external-apklibs/**

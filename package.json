@@ -1,0 +1,27 @@
+{
+  "name": "openclaw",
+  "version": "2.3.1",
+  "description": "Android Dev. Kit - DroidKit library",
+  "main": "index.js",
+  "bin": {
+    "openclaw": "./bin/openclaw.js"
+  },
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/realmikewestfall304-wq/droidkit.git"
+  },
+  "keywords": [
+    "android",
+    "droidkit",
+    "openclaw",
+    "android-library"
+  ],
+  "author": "Daniel Serdyukov",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
