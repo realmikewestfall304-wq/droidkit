@@ -40,9 +40,7 @@ public final class TelegramIntents {
    * @return Intent to launch Telegram
    */
   public static Intent launch() {
-    Intent intent = new Intent(Intent.ACTION_VIEW);
-    intent.setPackage(TELEGRAM_PACKAGE);
-    return intent;
+    return new Intent(Intent.ACTION_VIEW, Uri.parse(TELEGRAM_URL_SCHEME + "resolve"));
   }
 
   /**
