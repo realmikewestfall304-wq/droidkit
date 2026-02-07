@@ -46,23 +46,25 @@ public final class TelegramIntents {
   }
 
   /**
-   * Creates an intent to open a user's profile in Telegram.
+   * Creates an intent to open a user's profile or chat in Telegram.
+   * This opens the conversation thread with the specified user.
    *
    * @param username the Telegram username (without @ symbol)
-   * @return Intent to open the user's profile
+   * @return Intent to open the user's profile/chat
    */
   public static Intent profile(String username) {
     return new Intent(Intent.ACTION_VIEW, Uri.parse(TELEGRAM_URL_SCHEME + "resolve?domain=" + username));
   }
 
   /**
-   * Creates an intent to open a chat with a user.
+   * Creates an intent to open a chat with a user in Telegram.
+   * This is an alias for profile() as Telegram treats them identically.
    *
    * @param username the Telegram username (without @ symbol)
    * @return Intent to open a chat with the user
    */
   public static Intent chat(String username) {
-    return new Intent(Intent.ACTION_VIEW, Uri.parse(TELEGRAM_URL_SCHEME + "resolve?domain=" + username));
+    return profile(username);
   }
 
   /**
@@ -77,12 +79,13 @@ public final class TelegramIntents {
   }
 
   /**
-   * Creates an intent to share/forward content via Telegram.
+   * Creates an intent to share text content via Telegram.
+   * This opens the Telegram share dialog to select a chat to share with.
    *
    * @param text the text content to share
    * @return Intent to share content via Telegram
    */
-  public static Intent forward(String text) {
+  public static Intent share(String text) {
     Intent intent = new Intent(Intent.ACTION_SEND);
     intent.setType("text/plain");
     intent.setPackage(TELEGRAM_PACKAGE);
